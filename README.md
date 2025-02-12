@@ -1,0 +1,1 @@
+# easy-digital-downloads-adyen
