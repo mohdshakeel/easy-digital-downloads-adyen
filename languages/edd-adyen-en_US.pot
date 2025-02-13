@@ -1,0 +1,167 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: EDD Adyen Payment Gateway\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-03 15:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.14; wp-6.7.1\n"
+"X-Domain: edd-adyen"
+
+#. Description of the plugin
+msgid "Adds Adyen as a payment gateway for Easy Digital Downloads."
+msgstr ""
+
+#: includes/gateway/class-edd-adyen-gateway.php:36 
+#: includes/admin/class-edd-adyen-settings.php:36
+msgid "Adyen"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:59
+msgid "Adyen Settings"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:81
+msgid "Api Live EndPoint URL"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:60
+msgid "Configure the Adyen payment gateway."
+msgstr ""
+
+#: includes/gateway/class-edd-adyen-gateway.php:37
+msgid "Credit Card (Adyen)"
+msgstr ""
+
+#: edd-adyen-payment-gateway.php:104
+msgid ""
+"Easy Digital Downloads must be installed and activated for the Adyen gateway "
+"to work."
+msgstr ""
+
+#. Name of the plugin
+msgid "EDD Adyen Payment Gateway"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:76
+msgid "Enter your Adyen Live API Key."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:82
+msgid "Enter your Adyen Live EndPoint URL."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:95
+msgid "Enter your Adyen Merchant Account."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:88
+msgid "Enter your Adyen Test API Key."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:101
+msgid ""
+"Enter your Adyen Theme ID for hosted payment. To know about to find out  the "
+"Theme ID <a target=\"_blank\" href=\"https://docs.adyen.com/online-"
+"payments/build-your-integration/sessions-flow/?"
+"platform=Web&integration=Hosted+Checkout&programming_language=bash\">Click "
+"here</a>"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:110
+msgid "Hosted Payment Page"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://yourwebsite.com"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://yourwebsite.com/edd-adyen"
+msgstr ""
+
+#: includes/payments/class-edd-adyen-payment.php:205
+msgid "Invalid card data provided."
+msgstr ""
+
+#: includes/payments/class-edd-adyen-payment.php:269
+msgid "Invalid response from payment gateway."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:75
+msgid "Live API Key"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:69
+msgid "Live Payment Mode"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:94
+msgid "Merchant Account"
+msgstr ""
+
+#. Author of the plugin
+msgid "Mohammad"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:111
+msgid "Onsite Payment"
+msgstr ""
+
+#: includes/payments/class-edd-adyen-payment.php:73
+msgid "Pay with Adyen"
+msgstr ""
+
+#: includes/payments/class-edd-adyen-payment.php:105 
+#: includes/payments/class-edd-adyen-payment.php:115 
+#: includes/payments/class-edd-adyen-payment.php:255
+msgid "Payment gateway error."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:106
+msgid "Payment Mode"
+msgstr ""
+
+#: includes/payments/class-edd-adyen-payment.php:286
+msgid "Payment processing failed. Please try again."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:107
+msgid "Select the payment mode (Hosted or Onsite)."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:66
+msgid "Select the payment mode (Live or Test)."
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:87
+msgid "TEST API Key"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:65
+msgid "Test Mode"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:70
+msgid "Test Payment Mode"
+msgstr ""
+
+#: includes/admin/class-edd-adyen-settings.php:100
+msgid "Theme ID"
+msgstr ""
+
+#: includes/payments/class-edd-adyen-payment.php:184
+msgid "Unable to create payment record."
+msgstr ""
+
+#: includes/payments/class-edd-adyen-payment.php:304
+msgid "Unable to process payment."
+msgstr ""
