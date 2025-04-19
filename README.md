@@ -22,7 +22,7 @@ git push -uf origin main
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/nisar1486/edd-adyen-payment-gateway/-/settings/integrations)
+- [ ] [Set up project integrations](//github.com/mohdshakeel/easy-digital-downloads-adyen/)
 
 ## Collaborate with your team
 
