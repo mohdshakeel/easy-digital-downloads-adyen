@@ -1,17 +1,17 @@
-=== Adyen Payment Gateway ===
-Contributors: [WpSprintPlan]
+=== Integrate Adyen Payment Gateway for EDD ===
+Contributors: [mdshak]
 Tags: Easy Digital Downloads, Payment Gateway, Adyen
 Requires at least: 5.0
-Tested up to: 6.3
+Tested up to: 6.8
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Adyen Payment Gateway is an add-on plugin for Easy Digital Downloads (EDD) that integrates Adyen’s payment services.
+Integrate Adyen Payment Gateway for EDD is an add-on plugin for Easy Digital Downloads (EDD) that integrates Adyen’s payment services.
 
 == Description ==
 
-Adyen Payment Gateway allows you to connect your Easy Digital Downloads (EDD) store with Adyen’s robust payment platform. With this plugin, you can enable seamless payment processing for both test and live environments.
+Integrate Adyen Payment Gateway for EDD allows you to connect your Easy Digital Downloads (EDD) store with Adyen’s robust payment platform. With this plugin, you can enable seamless payment processing for both test and live environments.
 
 Key Features:
 - Switch between Test and Live modes.
@@ -92,5 +92,4 @@ For support, please visit [Support URL or Contact Email].
 == Changelog ==
 
 = 1.0.0 =
-* Initial release with support for Adyen’s payment gateway integration into Easy Digital Downloads.
-
+* Initial release with support for Integrate Adyen Payment Gateway for EDD Adyen’s payment gateway.

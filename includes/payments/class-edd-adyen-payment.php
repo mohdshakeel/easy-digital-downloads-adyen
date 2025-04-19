@@ -74,23 +74,29 @@ final class EDD_Adyen_Payment {
 	}
 
 	/**
-	 * Handle payment confirmation and verify nonce
-	 */
+	 * Handle payment confirmation. Adyen return the user to specific url with some data after payment from Adyen Website and We check here the payment confimation through API call.  
+	 * Adyen (or PayPal, Stripe, etc.) is sending the user back to https://yoursite.com/confirmation?payment-id=123, WordPress won’t expect a nonce because:
+     * The request originates from an external service, not from a logged-in user.
+     * The request is part of a transactional workflow, not an admin action.
+	 * If We verify nonce then it can be failed because user may take time.It may cause to failed nonce
+	 * We use the payment session id created  through the api call and check with return url data.
+	**/
 	public static function handle_edd_payment_confirmation() {
 		if (!is_page('confirmation') && !isset($_GET['payment-id']) && !isset($_GET['sessionId']) && !isset($_GET['sessionResult'])) {
 			return;
 		}
         // Hosted Mode Payment Confirmation
 		$paymentId     = absint($_GET['payment-id']);
-		$sessionId     = $_GET['sessionId'];
-		$sessionResult = $_GET['sessionResult'];
+		$sessionId     = sanitize_text_field($_GET['sessionId']);
+		$sessionResult = sanitize_text_field($_GET['sessionResult']);
 		$sessionIdMeta = edd_get_payment_meta($paymentId,'_edd_adyen_hosted_session_id',true);
+		//verifying the current payment session id with stored session id at the time of first api call
 		if (!$paymentId && !$sessionId && $sessionId !== $sessionIdMeta) {
 			return;
 		}
 
 		
-		$url = self::$endPoint . 'sessions/' . $sessionId . '?sessionResult=' . $sessionResult;
+		$url = trailingslashit(self::$endPoint) . 'sessions/' . $sessionId . '?sessionResult=' . $sessionResult;
 		
 		$args = [
 			'headers' => [
@@ -119,6 +125,7 @@ final class EDD_Adyen_Payment {
 
 		
 	}
+
 
 	/**
 	 * Process payment based on mode
@@ -167,7 +174,11 @@ final class EDD_Adyen_Payment {
 			'mode' => 'hosted',
 			'themeId' => sanitize_text_field(edd_get_option('adyen_theme_id')),
 			'reference' => $paymentId,
-			'returnUrl' => esc_url(add_query_arg('payment-id', $paymentId, edd_get_success_page_uri())),
+			'returnUrl' => wp_nonce_url(
+				esc_url(add_query_arg('payment-confirmation', 'adyen', edd_get_success_page_uri())),
+				'payment_confirmation_nonce',
+				'nonce'
+			),
 		);
 
 		$response = self::send_api_request($endPoint, $paymentData, $apiKey);

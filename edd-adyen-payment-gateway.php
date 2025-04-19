@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: EDD Adyen Payment Gateway
+ * Plugin Name: Integrate Adyen Payment Gateway for EDD
  * Plugin URI: https://yourwebsite.com/edd-adyen
  * Description: Adds Adyen as a payment gateway for Easy Digital Downloads.
  * Version: 1.0.0
