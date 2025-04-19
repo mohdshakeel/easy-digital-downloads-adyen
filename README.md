@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/nisar1486/edd-adyen-payment-gateway.git
+git remote add origin https:////github.com/mohdshakeel/easy-digital-downloads-adyen.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/nisar1486/edd-adyen-payment-gateway/-/settings/integrations)
+- [ ] [Set up project integrations](//github.com/mohdshakeel/easy-digital-downloads-adyen/)
 
 ## Collaborate with your team
 
