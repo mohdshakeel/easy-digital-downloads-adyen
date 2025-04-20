@@ -33,8 +33,8 @@ class EDD_Adyen_Gateway {
 	 */
 	public function register_adyen_gateway( $gateways ) {
 		$gateways['adyen'] = array(
-			'admin_label'    => __( 'Adyen', 'edd-adyen' ),
-			'checkout_label' => __( 'Credit Card (Adyen)', 'edd-adyen' ),
+			'admin_label'    => __( 'Adyen', 'integrate-adyen-payment-gateway-edd' ),
+			'checkout_label' => __( 'Credit Card (Adyen)', 'integrate-adyen-payment-gateway-edd' ),
 		);
 
 		return $gateways;

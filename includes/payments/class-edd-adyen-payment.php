@@ -70,7 +70,7 @@ final class EDD_Adyen_Payment {
 	 * Change gateway label
 	 */
 	public static function change_gateway_label($label) {
-		return esc_html__('Pay with Adyen', 'edd-adyen');
+		return esc_html__('Pay with Adyen', 'integrate-adyen-payment-gateway-edd');
 	}
 
 	/**
@@ -108,7 +108,7 @@ final class EDD_Adyen_Payment {
 	
 		$response = wp_remote_get($url, $args);
 		if (is_wp_error($response)) {
-			edd_set_error('adyen_error', __('Payment gateway error.', 'edd-adyen'));
+			edd_set_error('adyen_error', __('Payment gateway error.', 'integrate-adyen-payment-gateway-edd'));
 			edd_send_back_to_checkout('?payment-mode=adyen');
 		}
 
@@ -118,7 +118,7 @@ final class EDD_Adyen_Payment {
 		if ($result['status']=='completed') {
 			edd_update_payment_status($paymentId,'publish');
 		}else{
-			edd_set_error('adyen_error', __('Payment gateway error.', 'edd-adyen'));
+			edd_set_error('adyen_error', __('Payment gateway error.', 'integrate-adyen-payment-gateway-edd'));
 			edd_send_back_to_checkout('?payment-mode=adyen');
 
 		}
@@ -192,7 +192,7 @@ final class EDD_Adyen_Payment {
 	private static function create_payment($purchaseData) {
 		$paymentId = edd_insert_payment($purchaseData);
 		if (!$paymentId) {
-			edd_set_error('adyen_error', __('Unable to create payment record.', 'edd-adyen'));
+			edd_set_error('adyen_error', __('Unable to create payment record.', 'integrate-adyen-payment-gateway-edd'));
 			edd_send_back_to_checkout('?payment-mode=adyen');
 		}
 		return $paymentId;
@@ -213,7 +213,7 @@ final class EDD_Adyen_Payment {
 
 		foreach ($cardData as $key => $value) {
 			if (empty($value)) {
-				return new WP_Error('invalid_card_data', __('Invalid card data provided.', 'edd-adyen'));
+				return new WP_Error('invalid_card_data', __('Invalid card data provided.', 'integrate-adyen-payment-gateway-edd'));
 			}
 		}
 
@@ -263,7 +263,7 @@ final class EDD_Adyen_Payment {
 		));
 
 		if (is_wp_error($response)) {
-			edd_set_error('adyen_error', __('Payment gateway error.', 'edd-adyen'));
+			edd_set_error('adyen_error', __('Payment gateway error.', 'integrate-adyen-payment-gateway-edd'));
 			edd_send_back_to_checkout('?payment-mode=adyen');
 		}
 
@@ -277,7 +277,7 @@ final class EDD_Adyen_Payment {
 		$responseBody = json_decode(wp_remote_retrieve_body($response), true);
 
 		if (!is_array($responseBody)) {
-			edd_set_error('adyen_error', __('Invalid response from payment gateway.', 'edd-adyen'));
+			edd_set_error('adyen_error', __('Invalid response from payment gateway.', 'integrate-adyen-payment-gateway-edd'));
 			edd_send_back_to_checkout('?payment-mode=adyen');
 		}
 
@@ -294,7 +294,7 @@ final class EDD_Adyen_Payment {
 					edd_send_to_success_page();
 					break;
 				default:
-					edd_set_error('adyen_error', __('Payment processing failed. Please try again.', 'edd-adyen'));
+					edd_set_error('adyen_error', __('Payment processing failed. Please try again.', 'integrate-adyen-payment-gateway-edd'));
 					edd_send_back_to_checkout('?payment-mode=adyen');
 			}
 		}
@@ -312,7 +312,7 @@ final class EDD_Adyen_Payment {
 			wp_redirect(esc_url($result['url']));
             exit;
 		} else {
-			edd_set_error('adyen_error', __('Unable to process payment.', 'edd-adyen'));
+			edd_set_error('adyen_error', __('Unable to process payment.', 'integrate-adyen-payment-gateway-edd'));
 			edd_send_back_to_checkout('?payment-mode=adyen');
 		}
 	}

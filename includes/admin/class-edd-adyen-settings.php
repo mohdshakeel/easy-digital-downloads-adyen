@@ -33,7 +33,7 @@ class EDD_Adyen_Settings {
 	 * @return array Updated sections with Adyen.
 	 */
 	public function register_adyen_section( $sections ) {
-		$sections['adyen'] = __( 'Adyen', 'edd-adyen' );
+		$sections['adyen'] = __( 'Adyen', 'integrate-adyen-payment-gateway-edd' );
 		return $sections;
 	}
 
@@ -56,59 +56,59 @@ class EDD_Adyen_Settings {
 		$adyen_settings = array(
 			'adyen_settings' => array(
 				'id'   => 'adyen_settings',
-				'name' => '<strong>' . __( 'Adyen Settings', 'edd-adyen' ) . '</strong>',
-				'desc' => __( 'Configure the Adyen payment gateway.', 'edd-adyen' ),
+				'name' => '<strong>' . __( 'Adyen Settings', 'integrate-adyen-payment-gateway-edd' ) . '</strong>',
+				'desc' => __( 'Configure the Adyen payment gateway.', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'header',
 			),
 			'adyen_test_mode' => array(
 				'id'   => 'adyen_test_mode',
-				'name' => __( 'Test Mode', 'edd-adyen' ),
-				'desc' => __( 'Select the payment mode (Live or Test).', 'edd-adyen' ),
+				'name' => __( 'Test Mode', 'integrate-adyen-payment-gateway-edd' ),
+				'desc' => __( 'Select the payment mode (Live or Test).', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'select',
 				'options' => array(
-					'live' => __( 'Live Payment Mode', 'edd-adyen' ),
-					'test' => __( 'Test Payment Mode', 'edd-adyen' ),
+					'live' => __( 'Live Payment Mode', 'integrate-adyen-payment-gateway-edd' ),
+					'test' => __( 'Test Payment Mode', 'integrate-adyen-payment-gateway-edd' ),
 				),
 			),
 			'adyen_api_live_key' => array(
 				'id'   => 'adyen_api_live_key',
-				'name' => __( 'Live API Key', 'edd-adyen' ),
-				'desc' => __( 'Enter your Adyen Live API Key.', 'edd-adyen' ),
+				'name' => __( 'Live API Key', 'integrate-adyen-payment-gateway-edd' ),
+				'desc' => __( 'Enter your Adyen Live API Key.', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'text',
 			),
 			'adyen_live_url' => array(
 				'id'   => 'adyen_live_url',
-				'name' => __( 'Api Live EndPoint URL', 'edd-adyen' ),
-				'desc' => __( 'Enter your Adyen Live EndPoint URL.', 'edd-adyen' ),
+				'name' => __( 'Api Live EndPoint URL', 'integrate-adyen-payment-gateway-edd' ),
+				'desc' => __( 'Enter your Adyen Live EndPoint URL.', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'text',
 			),
 			'adyen_api_test_key' => array(
 				'id'   => 'adyen_api_test_key',
-				'name' => __( 'TEST API Key', 'edd-adyen' ),
-				'desc' => __( 'Enter your Adyen Test API Key.', 'edd-adyen' ),
+				'name' => __( 'TEST API Key', 'integrate-adyen-payment-gateway-edd' ),
+				'desc' => __( 'Enter your Adyen Test API Key.', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'text',
 			),
 			
 			'adyen_merchant_account' => array(
 				'id'   => 'adyen_merchant_account',
-				'name' => __( 'Merchant Account', 'edd-adyen' ),
-				'desc' => __( 'Enter your Adyen Merchant Account.', 'edd-adyen' ),
+				'name' => __( 'Merchant Account', 'integrate-adyen-payment-gateway-edd' ),
+				'desc' => __( 'Enter your Adyen Merchant Account.', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'text',
 			),
 			'adyen_theme_id' => array(
 				'id'   => 'adyen_theme_id',
-				'name' => __( 'Theme ID', 'edd-adyen' ),
-				'desc' => __( 'Enter your Adyen Theme ID for hosted payment. To know about to find out  the Theme ID <a target="_blank" href="https://docs.adyen.com/online-payments/build-your-integration/sessions-flow/?platform=Web&integration=Hosted+Checkout&programming_language=bash">Click here</a>', 'edd-adyen' ),
+				'name' => __( 'Theme ID', 'integrate-adyen-payment-gateway-edd' ),
+				'desc' => __( 'Enter your Adyen Theme ID for hosted payment. To know about to find out  the Theme ID <a target="_blank" href="https://docs.adyen.com/online-payments/build-your-integration/sessions-flow/?platform=Web&integration=Hosted+Checkout&programming_language=bash">Click here</a>', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'text',
 			),
 			'adyen_payment_mode' => array(
 				'id'   => 'adyen_payment_mode',
-				'name' => __( 'Payment Mode', 'edd-adyen' ),
-				'desc' => __( 'Select the payment mode (Hosted or Onsite).', 'edd-adyen' ),
+				'name' => __( 'Payment Mode', 'integrate-adyen-payment-gateway-edd' ),
+				'desc' => __( 'Select the payment mode (Hosted or Onsite).', 'integrate-adyen-payment-gateway-edd' ),
 				'type' => 'select',
 				'options' => array(
-					'hosted' => __( 'Hosted Payment Page', 'edd-adyen' ),
-					'onsite' => __( 'Onsite Payment', 'edd-adyen' ),
+					'hosted' => __( 'Hosted Payment Page', 'integrate-adyen-payment-gateway-edd' ),
+					'onsite' => __( 'Onsite Payment', 'integrate-adyen-payment-gateway-edd' ),
 				),
 			)
 		);

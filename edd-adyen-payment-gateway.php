@@ -10,7 +10,7 @@
  * Author URI: https://yourwebsite.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: edd-adyen
+ * Text Domain: integrate-adyen-payment-gateway-edd
  * Domain Path: /languages
  *
  * @package EDD_Adyen
@@ -101,14 +101,14 @@ final class EDD_Adyen {
      * Show an admin notice if EDD is missing
      */
     public static function edd_missing_notice(): void {
-        echo '<div class="notice notice-error"><p>' . esc_html__('Easy Digital Downloads must be installed and activated for the Adyen gateway to work.', 'edd-adyen') . '</p></div>';
+        echo '<div class="notice notice-error"><p>' . esc_html__('Easy Digital Downloads must be installed and activated for the Adyen gateway to work.', 'integrate-adyen-payment-gateway-edd') . '</p></div>';
     }
 
     /**
      * Load plugin text domain
      */
     public static function load_textdomain(): void {
-        load_plugin_textdomain('edd-adyen', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+        load_plugin_textdomain('integrate-adyen-payment-gateway-edd', false, dirname(plugin_basename(__FILE__)) . '/languages/');
     }
 
     /**
