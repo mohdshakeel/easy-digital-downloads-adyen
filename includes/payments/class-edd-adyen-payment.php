@@ -80,6 +80,7 @@ final class EDD_Adyen_Payment {
      * The request is part of a transactional workflow, not an admin action.
 	 * If We verify nonce then it can be failed because user may take time.It may cause to failed nonce
 	 * We use the payment session id created  through the api call and check with return url data.
+	 * We verified the session id of first api call with return url session id to confirm the payment.
 	**/
 	public static function handle_edd_payment_confirmation() {
 		if (!is_page('confirmation') && !isset($_GET['payment-id']) && !isset($_GET['sessionId']) && !isset($_GET['sessionResult'])) {
