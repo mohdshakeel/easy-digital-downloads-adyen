@@ -87,8 +87,8 @@ final class EDD_Adyen_Payment {
 		}
         // Hosted Mode Payment Confirmation
 		$paymentId     = absint($_GET['payment-id']);
-		$sessionId     = sanitize_text_field($_GET['sessionId']);
-		$sessionResult = sanitize_text_field($_GET['sessionResult']);
+		$sessionId     = sanitize_text_field(wp_unslash($_GET['sessionId']));
+		$sessionResult = sanitize_text_field(wp_unslash($_GET['sessionResult']));
 		$sessionIdMeta = edd_get_payment_meta($paymentId,'_edd_adyen_hosted_session_id',true);
 		//verifying the current payment session id with stored session id at the time of first api call
 		if (!$paymentId && !$sessionId && $sessionId !== $sessionIdMeta) {
